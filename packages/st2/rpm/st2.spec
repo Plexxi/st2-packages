@@ -16,6 +16,7 @@ Requires: st2python, python-devel, openssl-devel, libffi-devel, git, pam
 %else
 Requires: python-devel, openssl-devel, libffi-devel, git, pam
 %endif
+Requires: plexxi-python, mongodb-org, erlang, rabbitmq-server
 
 Summary: StackStorm all components bundle
 Conflicts: st2common
