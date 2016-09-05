@@ -67,7 +67,8 @@ el7:
     - BUILDNODE=centos7build
     - TESTNODE=centos7test
     - ST2_GITURL=https://github.com/Plexxi/st2
-    - ST2_GITREV=v2.0.0
+    - ST2_GITREV=plexxi-v2.0.0
+    - ST2PKG_RELEASE=2
     - ST2MISTRAL_GITURL=https://github.com/StackStorm/mistral
     - ST2MISTRAL_GITREV=st2-2.0.0
   links:
