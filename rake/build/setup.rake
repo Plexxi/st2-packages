@@ -33,13 +33,11 @@ namespace :setup do
   end
 
   task :install_st2_python do
-    # Only run if we use st2_python (currently only used on el6)
+    # Use st2_python for latest python
     if pipeopts.st2_python == 1
       pipeline do
-        run hostname: opts[:testnode] do |opts|
-          repo_path = '/etc/yum.repos.d/stackstorm-el6-stable.repo'
-          execute :wget, "-nv https://bintray.com/stackstorm/el6/rpm -O #{repo_path}"
-          execute :sed, "-ir 's~stackstorm/el6~stackstorm/el6/stable~' #{repo_path}"
+        run hostname: opts[:buildnode] do |opts|
+          execute :rpm, "-ivh http://yum:Plexxi@artifactory.plexxi.com:8081/artifactory/plexxi-yum-devel/plexxi-connect/el7/x86_64/Packages/plexxi-dev-repo-0.1-1.el7.centos.x86_64.rpm"
           execute :yum, "--nogpgcheck -y install st2python"
         end
       end

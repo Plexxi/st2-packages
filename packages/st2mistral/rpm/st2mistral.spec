@@ -19,6 +19,10 @@ Source0: .
 Provides: openstack-mistral
 Summary: Mistral workflow service
 
+%if 0%{?use_st2python}
+Requires: st2python
+BuildRequires: st2python
+%endif
 
 %description
   <insert long description, indented with spaces>
