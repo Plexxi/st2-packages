@@ -12,7 +12,6 @@
 # Change the virtualenv path to the target installation direcotry.
 #   - Install dependencies
 #   - Install package itself
-# virtualenv --python=/usr/share/python/st2python/bin/python --system-site-packages %{venv_dir} \
 %define pip_install_venv \
   %if 0%{?use_st2python} \
     export PATH=/usr/share/python/st2python/bin:$PATH \
