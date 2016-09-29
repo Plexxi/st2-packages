@@ -39,6 +39,7 @@ namespace :setup do
         run hostname: opts[:buildnode] do |opts|
           execute :rpm, "-ivh http://yum:Plexxi@artifactory.plexxi.com:8081/artifactory/plexxi-yum-devel/plexxi-connect/el7/x86_64/Packages/plexxi-dev-repo-0.1-1.el7.centos.x86_64.rpm"
           execute :yum, "--nogpgcheck -y install st2python"
+          execute :rm, "-f /etc/yum.repos.d/plexxiconnect-dev.repo"
         end
       end
     end
