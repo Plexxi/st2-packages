@@ -69,10 +69,10 @@ el7:
     - ST2_PYTHON=1
     - ST2_GITURL=https://github.com/Plexxi/st2
     - ST2_GITREV=plexxi-v2.0.0
-    - ST2PKG_RELEASE=3
+    - ST2PKG_RELEASE=1
     - ST2MISTRAL_GITURL=https://github.com/StackStorm/mistral
     - ST2MISTRAL_GITREV=st2-2.0.0
-    - MISTRAL_RELEASE=3
+    - MISTRAL_RELEASE=1
   links:
     - centos7build
     - centos7test
