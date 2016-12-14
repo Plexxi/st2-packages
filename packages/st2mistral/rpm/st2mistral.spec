@@ -19,6 +19,10 @@ Source0: .
 Provides: openstack-mistral
 Summary: st2 Mistral workflow service
 
+%if 0%{?use_st2python}
+Requires: st2python
+BuildRequires: st2python
+%endif
 
 %description
   Task orchestration and workflow engine with powerful strategies like parallelism, loops, retries,

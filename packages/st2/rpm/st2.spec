@@ -13,6 +13,7 @@ Epoch: %{epoch}
 
 %if 0%{?use_st2python}
 Requires: st2python, python-devel, openssl-devel, libffi-devel, git, pam
+BuildRequires: st2python
 %else
 Requires: python-devel, openssl-devel, libffi-devel, git, pam
 %endif

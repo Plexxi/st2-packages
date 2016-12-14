@@ -15,8 +15,10 @@
 %define pip_install_venv \
   %if 0%{?use_st2python} \
     export PATH=/usr/share/python/st2python/bin:$PATH \
+    virtualenv --python=/usr/share/python/st2python/bin/python %{venv_dir} \
+  %else \
+    virtualenv %{venv_dir} \
   %endif \
-  virtualenv %{venv_dir} \
   %{venv_pip} -r requirements.txt \
   %{venv_pip} . \
   venvctrl-relocate --source=%{venv_dir} --destination=/%{venv_install_dir} \
